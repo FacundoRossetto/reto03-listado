@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=REM:ital,wght@0,100;0,300;1,100&family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Mi listado</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bienvenida">
+        <h1>Bienvenidx!</h1>
+        <div class="registro">
+            <p>Ingresa tu nombre:</p>
+            <input type="text" id="nombre" class="inputName">
+            <button id="ingreso" class="btn">Ingresar</button>
+        </div>
+    </div>
+    
+    <div class="tareas">
+        <h2 id="mensaje"></h2>
+        <ul class="listado oculto" id="listado">
+            <div class="tarea"><li class="item"><p>Comprar comida</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Salir a caminar</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Estudiar JavaScript</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Contestar mails</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Dar el presente en WinterHack</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Limpiar la habitación</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Planificar cena</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Cargar nafta</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Escuchar temas pendientes</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="tarea"><li class="item"><p>Hablar a Pepe</p></li><input type="checkbox" class="checkbox"></div>
+        </ul>
+    </div>
+
+    <div class="contenedor">
+        <div class="hecho">
+            <p>Bien!</p>
+            <p>Terminaste: </p>
+            <p class="tareaHecho"></p>
+            <button class="btn">Ok</button>
+        </div>
+    </div>
+    
+<div class="contenedor">
+    <div class="completo">
+        <p>Felicitaciones !</p>
+        <p>Completaste todas las tareas de hoy.</p>
+        <button class="btn">Cerrar.</button>
+    </div>
+</div>
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>
