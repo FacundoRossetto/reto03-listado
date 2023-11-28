@@ -1,80 +1,80 @@
 /* Variables: */
 
-let nombre = document.getElementById("nombre")
+let name = document.getElementById("name")
 let checkboxes = document.querySelectorAll('.checkbox')
-let ingreso = document.getElementById("ingreso")
-let mensaje = document.getElementById("mensaje")
-let listado = document.getElementById("listado")
-let completoDiv = document.querySelector('.completo')
-let cerrarBoton = completoDiv.querySelector('button')
-let hechoDiv = document.querySelector('.hecho')
-let hechoBoton = hechoDiv.querySelector('button')
+let enter = document.getElementById("enter")
+let message = document.getElementById("message")
+let list = document.getElementById("list")
+let completeDiv = document.querySelector('.complete')
+let cerrarBoton = completeDiv.querySelector('button')
+let doneDiv = document.querySelector('.done')
+let hechoBoton = doneDiv.querySelector('button')
 
 
-/* Registro y bienvenida: */
+/* Login and welcome: */
 
-ingreso.addEventListener("click", () => {
-    let persona = nombre.value 
-    if(persona != ""){
-    dato = nombre.value
-    saludo = "Bienvenidx " + dato + ", estas son tus tareas de hoy:"
-    mensaje.innerHTML = saludo
-    listado.classList.remove('oculto')
-    listado.scrollIntoView({behavior: "smooth"})
+enter.addEventListener("click", () => {
+    let user = name.value 
+    if(user != ""){
+    data = name.value
+    greeting = "Welcome " + data + ", these are your tasks for today:"
+    message.innerHTML = greeting
+    list.classList.remove('hidden')
+    list.scrollIntoView({behavior: "smooth"})
     }else{
-        alert("Por favor ingresa tu nombre :)")
+        alert("Please enter your name! :)")
     }
 })
 
 
-/* Tareas completadas: */
+/* Completed tasks: */
 
 checkboxes.forEach(checkbox =>{
     checkbox.addEventListener('change', function(){
         item = this.parentElement.querySelector('p')
     if (this.checked) {
-        item.classList.add('verde')
-        let tarea = item.textContent
-        mostrarCartelHecho(tarea)
+        item.classList.add('green')
+        let task = item.textContent
+        showDoneAlert(task)
     }else{
         item.classList.remove('verde')
-        hechoDiv.style.display = 'none'
+        doneDiv.style.display = 'none'
     }
     } )
-    checkbox.addEventListener('change', verificarTareasCompletadas)
+    checkbox.addEventListener('change', checkCompletedTasks)
 })
 
 
-/* Mis funciones: */
+/* My functions: */
 
-function mostrarCartelHecho(tarea) {
-    let mensajeTarea = hechoDiv.querySelector('.tareaHecho')
-    mensajeTarea.innerHTML = tarea
-    hechoDiv.style.display = 'flex'
+function showDoneAlert(task) {
+    let taskMessage = doneDiv.querySelector('.task-done')
+    taskMessage.innerHTML = task
+    doneDiv.style.display = 'flex'
 }
 
-function verificarTareasCompletadas() {
-    let todasCompletadas = true
+function checkCompletedTasks() {
+    let allComplete = true
     checkboxes.forEach(checkbox => {
         if (!checkbox.checked) {
-            todasCompletadas = false
+            allComplete = false
         }
     })
-    if (todasCompletadas) {
-        completoDiv.style.display = 'flex'
+    if (allComplete) {
+        completeDiv.style.display = 'flex'
     } else {
-        completoDiv.style.display = 'none'
+        completeDiv.style.display = 'none'
     }
 }
 
 
-/* Botones para cerrar ventanas: */
+/* Close buttons: */
 
 hechoBoton.addEventListener('click', () => {
-    hechoDiv.style.display = 'none'
+    doneDiv.style.display = 'none'
 })
 
 cerrarBoton.addEventListener('click', () => {
-    completoDiv.style.display = 'none'
+    completeDiv.style.display = 'none'
 })
 

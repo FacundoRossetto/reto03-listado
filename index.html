@@ -6,49 +6,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins&family=REM:ital,wght@0,100;0,300;1,100&family=Varela+Round&display=swap" rel="stylesheet">
-    <title>Mi listado</title>
+    <title>To Do List</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="bienvenida">
-        <h1>Bienvenidx!</h1>
-        <div class="registro">
-            <p>Ingresa tu nombre:</p>
-            <input type="text" id="nombre" class="inputName">
-            <button id="ingreso" class="btn">Ingresar</button>
+    <div class="welcoming">
+        <h1>Welcome!</h1>
+        <div class="login">
+            <p>Please, enter your name:</p>
+            <input type="text" id="name" class="inputName">
+            <button id="enter" class="btn">Enter</button>
         </div>
     </div>
     
-    <div class="tareas">
-        <h2 id="mensaje"></h2>
-        <ul class="listado oculto" id="listado">
-            <div class="tarea"><li class="item"><p>Comprar comida</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Salir a caminar</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Estudiar JavaScript</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Contestar mails</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Dar el presente en WinterHack</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Limpiar la habitación</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Planificar cena</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Cargar nafta</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Escuchar temas pendientes</p></li><input type="checkbox" class="checkbox"></div>
-            <div class="tarea"><li class="item"><p>Hablar a Pepe</p></li><input type="checkbox" class="checkbox"></div>
+    <div class="tasks">
+        <h2 id="message"></h2>
+        <ul class="list hidden" id="list">
+            <div class="task"><li class="item"><p>Buy food</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Go outside for a walk</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>study javascript</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Answer emails</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Attend to the course class</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Clean up my room</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Plan dinner</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Take the bike for repair</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Listen to that new album!</p></li><input type="checkbox" class="checkbox"></div>
+            <div class="task"><li class="item"><p>Talk to Juan</p></li><input type="checkbox" class="checkbox"></div>
         </ul>
     </div>
 
-    <div class="contenedor">
-        <div class="hecho">
-            <p>Bien!</p>
-            <p>Terminaste: </p>
-            <p class="tareaHecho"></p>
+    <div class="container">
+        <div class="done">
+            <p>Nice!</p>
+            <p>You have finished: </p>
+            <p class="task-done"></p>
             <button class="btn">Ok</button>
         </div>
     </div>
     
-<div class="contenedor">
-    <div class="completo">
-        <p>Felicitaciones !</p>
-        <p>Completaste todas las tareas de hoy.</p>
-        <button class="btn">Cerrar.</button>
+<div class="container">
+    <div class="complete">
+        <p>Congratulations!</p>
+        <p>You completed all of today's tasks.</p>
+        <button class="btn">Close.</button>
     </div>
 </div>
     

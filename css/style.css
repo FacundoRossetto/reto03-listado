@@ -10,7 +10,7 @@ body{
     font-size: 25px;
 }
 
-.bienvenida{
+.welcoming{
     color: #212121;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@ body{
     margin: 30px;
 }
 
-.registro {
+.login {
     margin: 15px;
 }
 
@@ -31,7 +31,7 @@ body{
     border-radius: 10px;
 }
 
-.tareas{
+.tasks{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,14 +41,14 @@ body{
     padding: 10px;
 }
 
-.tareas h2{
+.tasks h2{
     font-size: 20px;
     margin: 30px 0;
     
 }
 
 
-.listado{
+.list{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,7 +64,7 @@ body{
     padding: 5px;
 }
 
-.tarea{
+.task{
     display: flex;
 }
 
@@ -74,11 +74,11 @@ body{
     width: 20px;
 }
 
-.contenedor{
+.container{
     position: relative;
 }
 
-.hecho{
+.done{
     background: #F8BBD0;
     display: none;
     flex-direction: column;
@@ -97,7 +97,7 @@ body{
 }
 
 
-.completo{
+.complete{
     background-color: #C2185B;
     display: none;
     flex-direction: column;
@@ -123,16 +123,16 @@ body{
 
 }
 
-.tareaHecho{
+.task-done{
     text-transform: uppercase;
 
 }
 
-.verde{
+.green{
     color: #FFC107;
     text-decoration: line-through;
 }
 
-.oculto{
+.hidden{
     display: none;
 }
