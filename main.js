@@ -6,9 +6,9 @@ let enter = document.getElementById("enter")
 let message = document.getElementById("message")
 let list = document.getElementById("list")
 let completeDiv = document.querySelector('.complete')
-let cerrarBoton = completeDiv.querySelector('button')
+let closeBtn = completeDiv.querySelector('button')
 let doneDiv = document.querySelector('.done')
-let hechoBoton = doneDiv.querySelector('button')
+let doneBtn = doneDiv.querySelector('button')
 
 
 /* Login and welcome: */
@@ -70,11 +70,11 @@ function checkCompletedTasks() {
 
 /* Close buttons: */
 
-hechoBoton.addEventListener('click', () => {
+doneBtn.addEventListener('click', () => {
     doneDiv.style.display = 'none'
 })
 
-cerrarBoton.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
     completeDiv.style.display = 'none'
 })
 

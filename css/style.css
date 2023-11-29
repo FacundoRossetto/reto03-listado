@@ -5,19 +5,32 @@
 }
 
 body{
-    background: #E91E63;
+    background-image: url("../img/bground.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #212121;
     font-family: 'Poppins', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: center;
 }
 
 .welcoming{
-    color: #212121;
+    background-color: rgba(21, 21, 21, 0.4);
+    border-radius: 10px;
+    color: #fafafa;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     padding: 10px;
     margin: 30px;
+    max-width: 600px;
 }
 
 .login {
@@ -25,10 +38,10 @@ body{
 }
 
 .inputName{
-    padding: 8px;
+    padding: 5px;
     margin: 10px;
-    border: 2px #212121 solid;
-    border-radius: 10px;
+    border: 0px #212121 solid;
+    border-radius: 5px;
 }
 
 .tasks{
@@ -41,22 +54,24 @@ body{
     padding: 10px;
 }
 
-.tasks h2{
+.list h2{
     font-size: 20px;
-    margin: 30px 0;
-    
+    margin: 10px 0;
 }
 
 
 .list{
+    color: #fafafa;
     display: flex;
+    background-color: rgba(21, 21, 21, 0.4);
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    border: 3px #212121 solid;
+    border: 0px #212121 solid;
     border-radius: 20px;
     max-width: 600px;
+    margin-bottom: 40px;
 }
 
 .item{
@@ -79,13 +94,15 @@ body{
 }
 
 .done{
-    background: #F8BBD0;
+    color: #fafafa;
+    font-size: 20px;
+    background: #212121;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 5px solid #212121;
+    border: 0px solid #212121;
     border-radius: 30px;
     padding: 10px;
     position: fixed;
@@ -98,12 +115,13 @@ body{
 
 
 .complete{
-    background-color: #C2185B;
+    font-size: 17px;
+    background-color: #FFC107;
     display: none;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 5px solid #212121;
+    border: 2px solid #fafafa;
     border-radius: 30px;
     padding: 10px;
     position: fixed;
@@ -115,17 +133,15 @@ body{
 }
 
 .btn{
-    background-color: #FFC107;
+    background-color: #fafafa;
     font-family: 'REM', sans-serif;
     color: #212121;
     padding: 5px;
-    border-radius: 20px;
-
+    border-radius: 10px;
 }
 
 .task-done{
     text-transform: uppercase;
-
 }
 
 .green{
