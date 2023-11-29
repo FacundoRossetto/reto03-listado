@@ -26,25 +26,6 @@ enter.addEventListener("click", () => {
     }
 })
 
-
-/* Completed tasks: */
-
-checkboxes.forEach(checkbox =>{
-    checkbox.addEventListener('change', function(){
-        item = this.parentElement.querySelector('p')
-    if (this.checked) {
-        item.classList.add('green')
-        let task = item.textContent
-        showDoneAlert(task)
-    }else{
-        item.classList.remove('verde')
-        doneDiv.style.display = 'none'
-    }
-    } )
-    checkbox.addEventListener('change', checkCompletedTasks)
-})
-
-
 /* My functions: */
 
 function showDoneAlert(task) {
@@ -68,10 +49,30 @@ function checkCompletedTasks() {
 }
 
 
+
+/* Completed tasks: */
+
+checkboxes.forEach(checkbox =>{
+    checkbox.addEventListener('change', function(){
+        item = this.parentElement.querySelector('p')
+    if (this.checked) {
+        item.classList.add('green')
+        let task = item.textContent
+        showDoneAlert(task)
+    }else{
+        item.classList.remove('verde')
+        doneDiv.style.display = 'none'
+    }
+    } )
+    checkCompletedTasks()
+})
+
+
 /* Close buttons: */
 
 doneBtn.addEventListener('click', () => {
     doneDiv.style.display = 'none'
+    checkCompletedTasks()
 })
 
 closeBtn.addEventListener('click', () => {

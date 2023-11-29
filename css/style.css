@@ -121,7 +121,7 @@ body{
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border: 2px solid #fafafa;
+    border: 5px solid #fafafa;
     border-radius: 30px;
     padding: 10px;
     position: fixed;
@@ -130,6 +130,10 @@ body{
     width: 250px;
     transform: translate(-50%, -50%);
     z-index: 999;
+}
+
+.complete p{
+    margin-bottom: 10px;
 }
 
 .btn{
@@ -142,6 +146,8 @@ body{
 
 .task-done{
     text-transform: uppercase;
+    color: #FFC107;
+    margin-bottom: 10px;
 }
 
 .green{
