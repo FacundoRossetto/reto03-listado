@@ -48,6 +48,17 @@ function checkCompletedTasks() {
     }
 }
 
+function restartApp() {
+    name.value = ''
+    message.innerHTML = ''
+    list.classList.add('hidden')
+
+    checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        let item = checkbox.parentElement.querySelector('p');
+        item.classList.remove('green');
+    });
+}
 
 
 /* Completed tasks: */
@@ -77,5 +88,6 @@ doneBtn.addEventListener('click', () => {
 
 closeBtn.addEventListener('click', () => {
     completeDiv.style.display = 'none'
+    restartApp()
 })
 
